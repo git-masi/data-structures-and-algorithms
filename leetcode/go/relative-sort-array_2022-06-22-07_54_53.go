@@ -33,6 +33,7 @@ func relativeSortArray(arr1 []int, arr2 []int) []int {
 
 	copy(temp, arr1[k:])
 
+	// This could be replaced with `sort.Ints(temp)`
 	sort.Slice(temp, func(i, j int) bool { return temp[i] < temp[j] })
 
 	copy(arr1[k:], temp)
